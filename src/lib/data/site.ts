@@ -12,7 +12,7 @@ export const site = {
 		line2: 'Woodstock, GA 30188',
 		country: 'USA'
 	},
-	yearsExperience: 22,
+	yearsExperience: 40,
 	nav: [
 		{ href: '/', label: 'Home' },
 		{ href: '/services', label: 'Services' },
