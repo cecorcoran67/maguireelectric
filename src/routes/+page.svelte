@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Reveal from '$lib/components/Reveal.svelte';
 	import { site, serviceTeasers } from '$lib/data/site';
 
@@ -33,7 +34,7 @@
 		</p>
 		<div class="hero-rise hero-rise-delay-2 mt-8 flex flex-wrap gap-3">
 			<a href={site.phoneHref} class="btn btn-primary">Call {site.phone}</a>
-			<a href="/contact" class="btn btn-ghost">Request a quote</a>
+			<a href="{base}/contact" class="btn btn-ghost">Request a quote</a>
 		</div>
 	</div>
 </section>
@@ -74,7 +75,7 @@
 		</ul>
 
 		<Reveal class="mt-12">
-			<a href="/services" class="btn btn-outline">View all services</a>
+			<a href="{base}/services" class="btn btn-outline">View all services</a>
 		</Reveal>
 	</div>
 </section>
@@ -107,7 +108,7 @@
 			</p>
 			<div class="mt-8 flex flex-wrap gap-3">
 				<a href={site.phoneHref} class="btn btn-primary">Call {site.phone}</a>
-				<a href="/contact" class="btn btn-outline">Request a quote</a>
+				<a href="{base}/contact" class="btn btn-outline">Request a quote</a>
 			</div>
 		</Reveal>
 	</div>

@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { site } from '$lib/data/site';
 
 	let open = $state(false);
 
-	const path = $derived(page.url.pathname);
+	const path = $derived(page.url.pathname.slice(base.length) || '/');
 
 	function isActive(href: string) {
 		if (href === '/') return path === '/';
@@ -21,7 +22,7 @@
 >
 	<div class="site-wrap flex h-16 items-center justify-between gap-4 md:h-[4.25rem]">
 		<a
-			href="/"
+			href="{base}/"
 			class="font-display text-lg tracking-[0.08em] text-white uppercase md:text-xl"
 			onclick={close}
 		>
@@ -31,7 +32,7 @@
 		<nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
 			{#each site.nav as item}
 				<a
-					href={item.href}
+					href="{base}{item.href}"
 					class="text-sm font-semibold tracking-wide uppercase transition-colors duration-(--duration-fast)"
 					class:text-amber={isActive(item.href)}
 					class:text-mist={!isActive(item.href)}
@@ -70,7 +71,7 @@
 			<nav class="site-wrap flex flex-col gap-1 py-4" aria-label="Mobile">
 				{#each site.nav as item}
 					<a
-						href={item.href}
+						href="{base}{item.href}"
 						class="rounded-md px-3 py-3 text-sm font-semibold tracking-wide uppercase"
 						class:text-amber={isActive(item.href)}
 						class:text-mist={!isActive(item.href)}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { site } from '$lib/data/site';
 </script>
 
@@ -19,7 +20,7 @@
 			<ul class="mt-4 space-y-2 text-sm">
 				{#each site.nav as item}
 					<li>
-						<a href={item.href} class="hover:text-white transition-colors">{item.label}</a>
+						<a href="{base}{item.href}" class="hover:text-white transition-colors">{item.label}</a>
 					</li>
 				{/each}
 			</ul>

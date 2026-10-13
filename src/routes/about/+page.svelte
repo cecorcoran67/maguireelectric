@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Reveal from '$lib/components/Reveal.svelte';
 	import { site } from '$lib/data/site';
 
@@ -61,7 +62,7 @@
 			<p class="mt-6 text-mist">— {site.legalName}</p>
 			<div class="mt-10 flex flex-wrap gap-3">
 				<a href={site.phoneHref} class="btn btn-primary">Call {site.phone}</a>
-				<a href="/contact" class="btn btn-ghost">Request a quote</a>
+				<a href="{base}/contact" class="btn btn-ghost">Request a quote</a>
 			</div>
 		</Reveal>
 	</div>
