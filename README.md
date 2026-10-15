@@ -25,7 +25,7 @@ npm run build
 npm run preview
 ```
 
-Uses `@sveltejs/adapter-static`; every page is prerendered. Pushes to `main` deploy to GitHub Pages at https://cecorcoran67.github.io/maguireelectric/ via `.github/workflows/pages.yml`.
+Uses `@sveltejs/adapter-static`; every page is prerendered. Pushes to `main` deploy to GitHub Pages at https://maguireelectric.com via `.github/workflows/pages.yml`.
 
 ### Domain cutover (from Yahoo hosting)
 
